@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>实验平台</title>
+    <style>
+        .wrapper{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;
+            display:flex;-webkit-flex-flow:row wrap;font-weight:bold;text-align:center}
+        .wrapper > *{padding:10px;flex:1 100%}
+        .header{background: #e7ff2d
+        }
+        .footer{background:lightgreen}
+        .main{text-align:left;background:deepskyblue;}
+        .aside-1{background: #ffc141;width: 20%}
+        .aside-2{background:hotpink}
+        @media all and (min-width:600px){.aside{flex:1 auto}/*让所有灵活的项目都带有相同的长度，忽略它们的内容：*/
+        }@media all and (min-width:800px){.main{flex:2 0px}
+            .aside-1{order:1}/*用整数值来定义排列顺序，数值小的排在前面。可以为负值*/
+            .main{order:2}
+            .aside-2{order:3}
+            .footer{order:4}
+        }
+        .layout{
+            background: #8080FF;
+        }
+        .pics{
+            background: aliceblue;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <!--    头部内容-->
+    <header class="header">XXXX模拟实验</header>
+
+    <!--    页面内容区块-->
+    <article class="main">
+        <!--        数据显示区域-->
+        <div>
+            <h3>实验数据</h3>
+            <div id="graph" class="graph"></div>
+        </div>
+
+        <!--        实验结论区域-->
+        <div id="content">
+            <h3>实验结论</h3>
+        </div>
+
+        <!--        实验结论区域-->
+        <div id="result">
+            <h3>实验评价</h3>
+        </div>
+    </article>
+
+    <!--    页面侧栏区块一，主要显示布局-->
+    <aside class="aside aside-1">
+        <h1>布局选择器</h1>
+        <div class="layout">
+            <p>线性布局</p>
+            <img src="img/layout/line.png" width="200" height="200"/>
+        </div>
+    </aside>
+
+    <!--    页面侧栏区块二，主要用于修改页面的图表内容-->
+    <aside class="aside aside-2">
+        <h2>实验数据图标管理</h2>
+        <div class="pics">
+            <p>饼图</p>
+            <img src="img/graph/pie.png" width="150" height="150">
+            <button>添加</button>
+        </div>
+        <div class="pics">
+            <p>条形图</p>
+            <img src="img/graph/column.png" width="150" height="150">
+            <button>添加</button>
+        </div>
+        <div class="pics">
+            <p>散点图</p>
+            <img src="img/graph/scattler.png" width="150" height="150">
+            <button>添加</button>
+        </div>
+        <div class="pics">
+            <p>仪表盘</p>
+            <img src="img/graph/gauge.png" width="150" height="150">
+            <button>添加</button>
+        </div>
+    </aside>
+    <footer class="footer">2019--xxx实验室</footer>
+</div>
+</body>
+
+<script type="text/javascript">
+</script>
+<!--加载google chart ajax-->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    // 加载google的图标api当前版本的包
+    google.charts.load('current', {'packages':['corechart']});
+    // 设置一个回调方法，这个方法会在加载结束后自动执行
+    google.charts.setOnLoadCallback(drawPieChart);
+    //回调方法中需要准备数据整理成需要数据表格，
+    //然后将数据表格实例化，然后将数据表绘制出来
+    function drawPieChart() {
+
+        // 创建数据表格
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+            ['Mushrooms', 3],
+            ['Onions', 1],
+            ['Olives', 1],
+            ['Zucchini', 1],
+            ['Pepperoni', 2]
+        ]);
+        // 设置数据表格的一些属性
+        var options = {'title':'How Much Pizza I Ate Last Night',
+            'width':400,
+            'height':300};
+
+        // 实例化并且绘制图标，传递一些参数
+        var chart = new google.visualization.PieChart(document.getElementById(addElementDiv("graph")));
+        chart.draw(data, options);
+    }
+</script>
+<script type="text/javascript">
+    //动态添加div
+    function addElementDiv(obj){
+        var parent = document.getElementById(obj);
+        //添加div
+        var id = "div"+Date.now();
+        var div = document.createElement("div");
+        //设置div属性
+        div.setAttribute("id",id);//给div一个id
+        div.innerHTML = "js 动态添加的div";//添加文字
+        parent.appendChild(div);
+        return id;
+    }
+</script>
+</html>
