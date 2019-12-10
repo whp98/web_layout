@@ -2,18 +2,15 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>实验平台</title>
+    <title>修改实验</title>
     <style>
         .wrapper{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;
             display:flex;-webkit-flex-flow:row wrap;font-weight:bold;text-align:center}
         .wrapper > *{padding:10px;flex:1 100%}
-        .header{background: #dff6f0
-        }
-        .footer{background: #dff6f0
-        }
+        .header{background: #dff6f0;height: 10%}
+        .footer{background: #dff6f0;height: 5%}
         .main{text-align:left;background: #46b3e6;}
-        .aside-1{background: #4d80e4
-        }
+        .aside-1{background: #4d80e4}
         .aside-2{background:#2e279d}
         @media all and (min-width:600px){.aside{flex:1 auto}/*让所有灵活的项目都带有相同的长度，忽略它们的内容：*/
         }@media all and (min-width:800px){.main{flex:2 0px}
@@ -31,6 +28,10 @@
         button{
             width: 80px;height: 40px;background: #4CAF50;border: none;color: white;font-size: 16px;
         }
+
+        textarea{
+            border:0;border-radius:5px;background-color:rgba(241,241,241,.98);width: 355px;height: 100px;padding: 10px;resize: none;
+        }
     </style>
 </head>
 <body>
@@ -40,28 +41,39 @@
 
     <!--    页面内容区块-->
     <article class="main">
-        <!--        实验内容区域-->
-        <div id="content" class="main-content">
-            <h3>实验内容</h3>
+        <form id="exp" action="exp.html">
+            <!--        实验内容区域-->
+            <div id="content" class="main-content">
+                <label>
+                    <h3>实验内容</h3>
+                    <textarea id="exp_content" name="exp_content">首先准备一个长木板，然后将小车放到长木板上，通过弹簧测力计来拉动小车测量摩擦力，然后分别在小车上添加1，2，3，4，5个5g的砝码测量摩擦力分别记录每组实验数据</textarea>
+                </label>
+            </div>
 
-        </div>
+            <!--        数据显示区域-->
+            <div class="main-data">
+                <h3>实验数据</h3>
+                <div id="graph" class="graph"></div>
+            </div>
 
-        <!--        数据显示区域-->
-        <div class="main-data">
-            <h3>实验数据</h3>
-            <div id="graph" class="graph"></div>
-        </div>
+            <!--        实验结论区域-->
+            <div id="result" class="main-result">
+                <label>
+                    <h3>实验结论</h3>
+                    <textarea id="exp_result" name="exp_result">实验验证物理的摩擦力公式F=μ×Fn准确性是正确的,摩檫力随着整体质量的增加线性增加</textarea>
+                </label>
+            </div>
 
-
-        <!--        实验结论区域-->
-        <div id="result" class="main-result">
-            <h3>实验结论</h3>
-        </div>
-
-        <!--        实验评价区域-->
-        <div id="comm" class="main-comm">
-            <h3>实验评价</h3>
-        </div>
+            <!--        实验评价区域-->
+            <div id="comm" class="main-comm">
+                <h3>实验评价</h3>
+                <label>评语<br>
+                    <textarea id="exp_comment" name="exp_comment">实验结论很客观，数据直观清晰，很好</textarea>
+                </label>
+                <br>
+                <button type="submit">保存修改</button>
+            </div>
+        </form>
     </article>
 
     <!--    页面侧栏区块一，主要显示布局-->
@@ -112,13 +124,14 @@
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
     // 加载google的图标api当前版本的包
-    google.charts.load('current', {'packages':['corechart','bar','gauge','scatter']});
+    google.charts.load('current', {'packages':['corechart','bar','gauge','scatter','table']});
     // 设置一个回调方法，这个方法会在加载结束后自动执行
-    google.charts.setOnLoadCallback(drawPieChart);
-    //回调方法中需要准备数据整理成需要数据表格，
-    //然后将数据表格实例化，然后将数据表绘制出来
-    function drawPieChart() {
+    google.charts.setOnLoadCallback(drawTableChart);
+    google.charts.setOnLoadCallback(drawLineChart);
 
+    //回调方法中需要准备数据整理成需要数据表格，
+    //然后将数据表格实例化，然后将数据表绘制出来、
+    function drawPieChart() {
         // 创建数据表格
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Topping');
@@ -133,10 +146,11 @@
         // 设置数据表格的一些属性
         var options = {'title':'How Much Pizza I Ate Last Night',
             'width':400,
-            'height':250};
+            'height':250
+        };
 
         // 实例化并且绘制图标，传递一些参数
-        var chart = new google.visualization.PieChart(document.getElementById(addElementDiv("graph")));
+        var chart = new google.visualization.PieChart(document.getElementById(addElementDiv("Pie","graph")));
         chart.draw(data, options);
     }
 
@@ -152,7 +166,7 @@
             ['2011', 1030, 540]
         ]);
 
-        var chart = new google.visualization.ColumnChart(document.getElementById(addElementDiv("graph")));
+        var chart = new google.visualization.ColumnChart(document.getElementById(addElementDiv("Column","graph")));
 
         chart.draw(data, {
             width: '100%',
@@ -180,7 +194,7 @@
         data.addColumn('string', 'Task');
         data.addColumn('number', 'Hours per Day');
         data.addRows([['Work',11],['Eat',2],['Commute',2],['Watch TV',2],['Sleep',7]]);
-        var chart = new google.visualization.PieChart(document.getElementById(addElementDiv("graph")));
+        var chart = new google.visualization.PieChart(document.getElementById(addElementDiv("Pie","graph")));
         chart.draw(data, {
             width: '100%',
             height: 200,
@@ -200,8 +214,7 @@
             [4,40,8],
             [5,45,9]
         ]);
-
-        var chart = new google.visualization.LineChart(document.getElementById(addElementDiv("graph")));
+        var chart = new google.visualization.LineChart(document.getElementById(addElementDiv("Line","graph")));
 
         chart.draw(data, {
             width: '100%',
@@ -224,6 +237,22 @@
             lineWidth:4,
             axisTitlesPosition:"none"
         });
+    }
+    function drawTableChart() {
+        data = new google.visualization.DataTable();
+        data.addColumn('number', '砝码数量');
+        data.addColumn('number', '总质量');
+        data.addColumn('number', '摩擦力');
+        data.addRows([
+            [0,20,4],
+            [1,25,5],
+            [2,30,6],
+            [3,35,7],
+            [4,40,8],
+            [5,45,9]
+        ]);
+        var chart = new google.visualization.Table(document.getElementById(addElementDiv("Table","graph")));
+        chart.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
     }
     function drawScattlerChart() {
         var data = new google.visualization.DataTable();
@@ -261,7 +290,7 @@
             vAxis: {title: 'Grade'}
         };
 
-        var chart = new google.charts.Scatter(document.getElementById(addElementDiv("graph")));
+        var chart = new google.charts.Scatter(document.getElementById(addElementDiv("Scattler","graph")));
 
         chart.draw(data, google.charts.Scatter.convertOptions(options))
     }
@@ -280,7 +309,7 @@
             minorTicks: 5
         };
 
-        var chart = new google.visualization.Gauge(document.getElementById(addElementDiv("graph")));
+        var chart = new google.visualization.Gauge(document.getElementById(addElementDiv("Gauge","graph")));
 
         chart.draw(data, options);
 
@@ -300,17 +329,29 @@
 </script>
 <script type="text/javascript">
     //动态添加div
-    function addElementDiv(obj){
+    function addElementDiv(charttype,obj){
         var parent = document.getElementById(obj);
         //添加div
-        var id = "div"+Date.now();
+        var id = charttype+Date.now();
         var div = document.createElement("div");
+        var div1 = document.createElement("div");
         var br = document.createElement("br");
+        //显示接口id用
+        var textArea = document.createElement("textarea");
+        //显示接口提示
+        var pppp = document.createElement("p");
+        pppp.innerHTML="请直接输入数据接口";
+        //显示接口id和接口定义
+        textArea.innerHTML=charttype+','+id+',';
+        textArea.name="dig";
         //设置div属性
         div.setAttribute("id",id);//给div一个id
-        div.innerHTML = "js 动态添加的div";//添加文字
+        //添加接口类型
         parent.appendChild(br);
-        parent.appendChild(div);
+        div1.appendChild(div);
+        div1.appendChild(pppp);
+        div1.appendChild(textArea);
+        parent.appendChild(div1);
         return id;
     }
 </script>

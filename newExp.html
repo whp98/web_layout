@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新建实验</title>
+    <style type="text/css">
+        button{
+            width: 80px;height: 40px;background: #4CAF50;border: none;color: white;font-size: 16px;
+        }
+
+        textarea{
+            border:0;border-radius:5px;background-color:rgba(241,241,241,.98);width: 355px;height: 100px;padding: 10px;resize: none;
+        }
+        form{
+
+        }
+        .newfrom{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="newfrom">
+    <h2>新建一个实验</h2>
+    <form action="exp.html">
+        实验信息
+        <label>实验名称:<br>
+            <textarea id="name" name="expname">摩擦力实验</textarea>
+            <br></label>
+        <label>
+            实验目的:<br>
+            <textarea id="exppurpose" name="exppurpose" >验证物理的摩擦力F=μ×Fn准确性</textarea>
+            <br>
+        </label>
+        <label>
+            实验描述：<br>
+            <textarea id="expdescribe" name="expdescribe" >通过变更小车上面负重的大小，测出不同小车重量的摩擦力，最终通过摩擦力的公式来计算小车和平面的摩擦系数</textarea>
+            <br>
+        </label>
+        <br>
+        <button type="submit" >提交实验</button>
+    </form>
+</div>
+
+</body>
+</html>

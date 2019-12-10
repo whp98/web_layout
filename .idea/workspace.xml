@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="035a34d0-f3be-4470-85a5-663b58189f29" name="Default Changelist" comment="" />
+    <list default="true" id="035a34d0-f3be-4470-85a5-663b58189f29" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/editExp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/graph/line.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newExp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samples/column.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samples/简单的多图.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dig/两个不同的图.html" beforeDir="false" afterPath="$PROJECT_DIR$/samples/两个不同的图.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dig/两个饼图.html" beforeDir="false" afterPath="$PROJECT_DIR$/samples/两个饼图.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dig/事件星星圈.html" beforeDir="false" afterPath="$PROJECT_DIR$/samples/事件星星圈.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dig/多项目散点图.html" beforeDir="false" afterPath="$PROJECT_DIR$/samples/多项目散点图.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dig/散点图.html" beforeDir="false" afterPath="$PROJECT_DIR$/samples/散点图.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dig/散点图例子.html" beforeDir="false" afterPath="$PROJECT_DIR$/samples/散点图例子.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dig/饼图例子.html" beforeDir="false" afterPath="$PROJECT_DIR$/samples/饼图例子.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanlan.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanlan.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +29,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -17,7 +37,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\PROject\web_layout\.idea" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1UXuujJF8R3HmvWDaLeoczqaza7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -26,8 +54,10 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/img/graph" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/sanlan.html" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -60,17 +90,46 @@
       <updated>1575515485674</updated>
       <workItem from="1575515488582" duration="4448000" />
       <workItem from="1575541467973" duration="2665000" />
-      <workItem from="1575777608158" duration="7196000" />
+      <workItem from="1575777608158" duration="23242000" />
+      <workItem from="1575811381510" duration="5882000" />
     </task>
+    <task id="LOCAL-00001" summary="初始化">
+      <created>1575785255012</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575785255012</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="初始化" />
+    <option name="LAST_COMMIT_MESSAGE" value="初始化" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1575535364133">
+    <state x="508" y="240" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575785293181">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1575535364133" />
+    <state x="508" y="240" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864/1920.0.1024.768@0.0.1536.864" timestamp="1575785293181" />
+    <state x="385" y="29" key="CommitChangelistDialog2" timestamp="1575785253335">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="385" y="29" key="CommitChangelistDialog2/0.0.1536.864/1920.0.1024.768@0.0.1536.864" timestamp="1575785253335" />
+    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog" timestamp="1575786763656">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog/0.0.1536.864/1920.0.1024.768@0.0.1536.864" timestamp="1575786763656" />
+    <state x="549" y="190" key="FileChooserDialogImpl" timestamp="1575786731545">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="549" y="190" key="FileChooserDialogImpl/0.0.1536.864/1920.0.1024.768@0.0.1536.864" timestamp="1575786731545" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1575813633571">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1575813633571" />
   </component>
 </project>
