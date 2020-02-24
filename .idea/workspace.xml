@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="035a34d0-f3be-4470-85a5-663b58189f29" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/editExp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/graph/line.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newExp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/column.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/简单的多图.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sucai/流星坠落.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dig/两个不同的图.html" beforeDir="false" afterPath="$PROJECT_DIR$/samples/两个不同的图.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dig/两个饼图.html" beforeDir="false" afterPath="$PROJECT_DIR$/samples/两个饼图.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dig/事件星星圈.html" beforeDir="false" afterPath="$PROJECT_DIR$/samples/事件星星圈.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dig/多项目散点图.html" beforeDir="false" afterPath="$PROJECT_DIR$/samples/多项目散点图.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dig/散点图.html" beforeDir="false" afterPath="$PROJECT_DIR$/samples/散点图.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dig/散点图例子.html" beforeDir="false" afterPath="$PROJECT_DIR$/samples/散点图例子.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dig/饼图例子.html" beforeDir="false" afterPath="$PROJECT_DIR$/samples/饼图例子.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanlan.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanlan.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +44,9 @@
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/sanlan.html" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PROject\web_layout" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\PROject\web_layout\img\graph" />
       <recent name="D:\PROject\web_layout\img\layout" />
@@ -92,6 +79,10 @@
       <workItem from="1575541467973" duration="2665000" />
       <workItem from="1575777608158" duration="23242000" />
       <workItem from="1575811381510" duration="5882000" />
+      <workItem from="1575937167564" duration="187000" />
+      <workItem from="1580720327165" duration="671000" />
+      <workItem from="1581058935078" duration="1756000" />
+      <workItem from="1581144636602" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1575785255012</created>
@@ -100,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575785255012</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="简单示例">
+      <created>1575937218291</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575937218291</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,17 +106,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初始化" />
-    <option name="LAST_COMMIT_MESSAGE" value="初始化" />
+    <MESSAGE value="简单示例" />
+    <option name="LAST_COMMIT_MESSAGE" value="简单示例" />
   </component>
   <component name="WindowStateProjectService">
     <state x="508" y="240" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575785293181">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="508" y="240" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864/1920.0.1024.768@0.0.1536.864" timestamp="1575785293181" />
-    <state x="385" y="29" key="CommitChangelistDialog2" timestamp="1575785253335">
+    <state x="385" y="29" key="CommitChangelistDialog2" timestamp="1575937217139">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="385" y="29" key="CommitChangelistDialog2/0.0.1536.864/1920.0.1024.768@0.0.1536.864" timestamp="1575785253335" />
+    <state x="385" y="29" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1575937217139" />
     <state x="93" y="93" width="1350" height="678" key="DiffContextDialog" timestamp="1575786763656">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
